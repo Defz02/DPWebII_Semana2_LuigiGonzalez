@@ -1,7 +1,7 @@
 # Mini CRUD - PHP + MySQL con Docker Compose
 
 ## Integrante
-* Leonel Gonzalo Gonzalez (Luigi Gonzalez)
+* Sr. Gonzalez (Luigi Gonzalez)
 
 ## Requisitos
 * Docker

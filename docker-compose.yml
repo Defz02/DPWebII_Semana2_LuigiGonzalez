@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # servicio de la DB
+  db:
+    image: mysql:8.0
+    container_name: mysql_crud
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: crud_db
+      MYSQL_USER: user_crud
+      MYSQL_PASSWORD: user_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+      - mysql_data:/var/lib/mysql
+
+  # Sercicio de app php
+  app:
+    image: php:8.2-apache
+    container_name: php_crud
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+    # Comando para la extension
+    command: >
+      sh -c "docker-php-ext-install pdo pdo_mysql && apache2-foreground"
+
+volumes:
+  mysql_data:

@@ -1,7 +1,7 @@
 # Mini CRUD - PHP + MySQL con Docker Compose
 
 ## Integrante
-* Leonel Gonzalo Gonzalez (Luigi Gonzalez)
+(Luigi Gonzalez)
 
 ## Descripción 
 Este proyecto consiste en una aplicación web básica (CRUD) desarrollada en PHP que interactúa con una base de datos MySQL. Toda la infraestructura está contenerizada utilizando Docker y Docker Compose para garantizar un entorno de desarrollo limpio, aislado y de fácil despliegue.
